@@ -1,0 +1,29 @@
+function wrapValue(n) {
+  var localVariable = n;
+  return function() { return localVariable; };
+}
+
+var wrap1 = wrapValue(1);
+var wrap2 = wrapValue(2);
+console.log(wrap1());
+// → 1
+console.log(wrap2());
+// → 2
+
+
+Closures:
+
+what’s great about this setup is that every local variable to a function is grandfathered into an enclosed function. When a specific instance of a variable is accessible in an enclosed function, this is called a closure.
+
+local variables are re-created for every call—different calls can’t trample on one another’s local variables.
+
+Recursion:
+
+a function that calls itself.
+
+a recursive function can also be done using loops. Loops are a lot less resource intensive on the browser, but are not as elegant to read. Recursive function take up a lot of procession power - to be calling a function over and over again
+
+
+
+	
+}
